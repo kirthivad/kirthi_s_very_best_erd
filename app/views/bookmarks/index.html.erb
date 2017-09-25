@@ -22,8 +22,11 @@
         <td><%= bookmark.dish.name %></td>
         <td>
           <a href="/bookmarks/<%= bookmark.id %>" class="btn btn-primary">Show</a>
-          <a href="/bookmarks/<%= bookmark.id %>/edit" class="btn btn-warning">Edit</a>
-          <a href="/delete_bookmark/<%= bookmark.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          
+          <% if current_user == bookmark.user %>
+            <a href="/bookmarks/<%= bookmark.id %>/edit" class="btn btn-warning">Edit</a>
+            <a href="/delete_bookmark/<%= bookmark.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+          <% end %>
         </td>
       </tr>
       <% end %>
