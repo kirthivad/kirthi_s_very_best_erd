@@ -1,0 +1,1 @@
+{"name":"Kirthi's Very Best ERD","repository":"https://github.com/kirthivad/kirthi_s_very_best_erd","env":{"CLOUDINARY_CLOUD_NAME":{"required":true},"CLOUDINARY_API_KEY":{"required":true},"CLOUDINARY_API_SECRET":{"required":true},"ROLLBAR_ACCESS_TOKEN":{"required":true}}}
