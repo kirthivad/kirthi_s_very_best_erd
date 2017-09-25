@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h3>Venue #<%= @venue.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12 mb-2">
+    <dl class="dl-horizontal">
+      <dt>Name</dt>
+      <dd><%= @venue.name %></dd>
+
+      <dt>Neighborhood</dt>
+      <dd><%= @venue.neighborhood_id %></dd>
+
+      <dt>Address</dt>
+      <dd><%= @venue.address %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/venues" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/venues/<%= @venue.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_venue/<%= @venue.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>
