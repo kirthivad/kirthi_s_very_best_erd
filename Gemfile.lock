@@ -29,6 +29,14 @@ GIT
       responders
 
 GIT
+  remote: https://github.com/firstdraft/seed_dump.git
+  revision: 08707d80fa0d9776b2118fbdabd66f9548181e0a
+  specs:
+    seed_dump (3.2.4)
+      activerecord (>= 4)
+      activesupport (>= 4)
+
+GIT
   remote: https://github.com/raghubetina/starter_generators.git
   revision: 8127fb9dd6671cb4084316aebe411974a4507370
   branch: firstdraft
@@ -70,6 +78,8 @@ GEM
       activemodel (= 5.0.6)
       activesupport (= 5.0.6)
       arel (~> 7.0)
+    activerecord-import (0.20.1)
+      activerecord (>= 3.2)
     activesupport (5.0.6)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
@@ -242,6 +252,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  activerecord-import
   bootstrap4-kaminari-views
   byebug
   coffee-rails (~> 4.2)
@@ -259,6 +270,7 @@ DEPENDENCIES
   rails_12factor
   rollbar
   sass-rails (~> 5.0)
+  seed_dump!
   sqlite3
   starter_generators!
   tzinfo-data
