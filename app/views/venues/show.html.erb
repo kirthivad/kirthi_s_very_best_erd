@@ -12,7 +12,11 @@
       <dd><%= @venue.neighborhood_id %></dd>
 
       <dt>Address</dt>
-      <dd><%= @venue.address %></dd>
+      <dd>
+        <div>
+          <div id="location_map" style="height: 480px;"></div>
+        </div>
+      </dd>
 
     </dl>
 
@@ -117,3 +121,21 @@
     </ul>
   </div>
 </div>
+
+
+<script src="//maps.google.com/maps/api/js?v=3.24&key=AIzaSyCOTPWiuvyyo6sKoIBzKA4-1ol-vTOIOlM"></script>
+<script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+<script>
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'location_map'}}, function(){
+    markers = handler.addMarkers([
+      {
+        "lat": <%= @venue.address_latitude %>,
+        "lng": <%= @venue.address_longitude %>,
+        "infowindow": "<h5><%= @venue.created_at %></h5><small><%= @venue.address_formatted_address %></small>"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+</script>
