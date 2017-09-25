@@ -49,3 +49,5 @@ gem 'inherited_resources', :git => 'https://github.com/activeadmin/inherited_res
 gem 'gmaps4rails'
 gem 'underscore-rails'
 gem "rollbar"
+gem "kaminari"
+gem "bootstrap4-kaminari-views"
