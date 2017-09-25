@@ -54,6 +54,32 @@
           </div>
         </li>
       <% end %>
+
+      <li class="list-group-item">
+        <form action="/create_bookmark" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for user_id -->
+      <input type="hidden" name="user_id" value="<%= current_user.id %>">
+
+      <!-- Label and input for venue_id -->
+      <div class="form-group">
+        <label for="venue_id" class="control-label">
+          Venue
+        </label>
+
+        <%= select_tag(:venue_id, options_from_collection_for_select(Venue.all, :id, :name), :class => "form-control") %>
+      </div>
+
+      <!-- Label and input for dish_id -->
+      <input type="hidden" name="dish_id" value="<%= @dish.id %>">
+
+      <button class="btn btn-block btn-success">
+        Create Bookmark
+      </button>
+    </form>
+      </li>
     </ul>
   </div>
 </div>
