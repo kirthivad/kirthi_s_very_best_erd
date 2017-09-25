@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "dishes#index"
   # Routes for the Neighborhood resource:
   # CREATE
   get "/neighborhoods/new", :controller => "neighborhoods", :action => "new"
