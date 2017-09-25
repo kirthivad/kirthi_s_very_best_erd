@@ -90,6 +90,8 @@ GEM
     arel (7.1.4)
     bcrypt (3.1.11)
     bindex (0.5.0)
+    bootstrap3-datetimepicker-rails (4.17.47)
+      momentjs-rails (>= 2.8.1)
     bootstrap4-kaminari-views (1.0.0)
       kaminari (>= 0.13)
       rails (>= 3.1)
@@ -154,6 +156,8 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.3.0)
     minitest (5.10.3)
+    momentjs-rails (2.17.1)
+      railties (>= 3.1)
     multi_json (1.12.2)
     nio4r (2.1.0)
     nokogiri (1.8.1)
@@ -253,6 +257,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   activerecord-import
+  bootstrap3-datetimepicker-rails (~> 4.17.43)
   bootstrap4-kaminari-views
   byebug
   coffee-rails (~> 4.2)
@@ -264,10 +269,12 @@ DEPENDENCIES
   jquery-rails
   kaminari
   listen (~> 3.0.5)
+  momentjs-rails (>= 2.9.0)
   pg
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   rails_12factor
+  ransack
   rollbar
   sass-rails (~> 5.0)
   seed_dump!
